@@ -26,5 +26,3 @@ sequelize.sync({ force: false }).then(() => {
 });
 
 
-// '/', 'login' , 'login#', 'signup', 
-// 'dashboard', 'dashboard/new', 'dashboard/edit/:id'
