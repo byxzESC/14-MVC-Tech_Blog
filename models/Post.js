@@ -19,18 +19,20 @@ User.init (
             type: DataTypes.TEXT,
             allowNull: false
         },
-        created_at: {
-            type: DataTypes.TIMESTAMP,
-            allowNull: false
-        },
-        user_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            reference: {
-                model: 'user',
-                key: 'id',
-            }
-        }
+        // testing without user and time
+        
+        // created_at: {
+        //     type: DataTypes.TIMESTAMP,
+        //     allowNull: false
+        // },
+        // user_id: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     reference: {
+        //         model: 'user',
+        //         key: 'id',
+        //     }
+        // }
     },
     {
         sequelize,
