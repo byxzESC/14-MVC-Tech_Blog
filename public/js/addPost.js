@@ -1,44 +1,28 @@
 async function newFormHandler(event) {
-    event.preventDefault();
-  
-    const dish_name = document.querySelector('#dish_name').value;
-    const description = document.querySelector('#description').value;
-    const guest_name = document.querySelector('#guest_name').value;
-    const has_nuts = document.querySelector('#has_nuts:checked') ? true : false;
-  
-    const response = await fetch(`/api/dish`, {
-      method: 'POST',
-      body: JSON.stringify({
-        dish_name,
-        description,
-        guest_name,
-        has_nuts,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-  
-    if (response.ok) {
-      document.location.replace('/');
-    } else {
-      alert('Failed to add dish');
-    }
-  }
-  
-  document.querySelector('.new-dish-form').addEventListener('submit', newFormHandler);
-  
-  const result = []
-  function bubbleSort (arr, n) {
+  event.preventDefault();
 
-    if (swapped == false) {
-      return;
-    }
+  const title = document.querySelector("#post_name").value;
+  const content = document.querySelector("#content").value;
+  // const guest_name = document.querySelector("#guest_name").value;
 
-    for (var i =0; i < n - 1; i ++) {
-      swapped = false
-      for (var j =0 ; j < n - i - 1; j++) {
-        
-      }
-    }
+  const response = await fetch(`/api/dashboard/new`, {
+    method: "POST",
+    body: JSON.stringify({
+      title,
+      content
+    }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  if (response.ok) {
+    document.location.replace("/");
+  } else {
+    alert("Failed to add post");
   }
+}
+
+document
+  .querySelector(".new-post-form")
+  .addEventListener("submit", newFormHandler);

@@ -1,13 +1,13 @@
-const { Model, DataTypes } = require("sequelize");
+const { Model, DataTypes, bulkCreate } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Post extends Model {
+class Comment extends Model {
   static bulkCreate(data) {
     return this.bulkCreate(data);
   }
 }
-// post title, post content, creator, create date
-Post.init(
+// comment content, creator, create date
+Comment.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -15,11 +15,7 @@ Post.init(
       autoIncrement: true,
       primaryKey: true,
     },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    content: {
+    comment: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
@@ -41,8 +37,8 @@ Post.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "post",
+    modelName: "comment",
   }
 );
 
-module.exports = Post;
+module.exports = Comment;

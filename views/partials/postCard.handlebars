@@ -1,0 +1,20 @@
+<section class="card">
+  <div class="post">
+    <header class="post-title">{{post.title}}</header>
+    <p class="post-body">{{post.content}}</p>
+    {{!-- testing posts without user and time --}}
+    <p class="post-desc">Posted by {{post.username}} on {{post.created_at}}</p>
+	<p class="comment">{{comment}}</p>
+  </div>
+</section>
+
+
+{{!-- <div>
+	<a href="/post/{{post.id}}"><h1>{{post.name}}</h1></a>
+	{{#if allowDelete}}
+		<button class="delete" data-id="{{post.id}}">Delete</button>
+	{{/if}}
+	<hr/>
+	<p>{{post.content}}</p>
+	<p>${{comment}}</p>
+</div> --}}

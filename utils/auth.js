@@ -14,4 +14,4 @@ const areAuth = (req, res, next) => {
   }
 };
 
-(module.exports = withAuth), areAuth;
+module.exports = withAuth, areAuth;
