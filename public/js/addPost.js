@@ -3,13 +3,13 @@ async function newFormHandler(event) {
 
   const title = document.querySelector("#post_name").value;
   const content = document.querySelector("#content").value;
-  // const guest_name = document.querySelector("#guest_name").value;
 
   const response = await fetch(`/api/dashboard/new`, {
     method: "POST",
     body: JSON.stringify({
       title,
-      content
+      content,
+      userId
     }),
     headers: {
       "Content-Type": "application/json",
@@ -17,7 +17,7 @@ async function newFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.replace("/");
+    document.location.replace("/dashboard");
   } else {
     alert("Failed to add post");
   }

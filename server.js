@@ -3,7 +3,6 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const sequelize = require('./config/connection');
-const helpers = require('./utils/helpers');
 // routes
 const routes = require('./controllers');
 // session
@@ -17,7 +16,7 @@ const sess = {
   secret: 'hopefully everything works',
   cookie: {
     // two hours cookie
-    maxAge: 7200,
+    // maxAge: 7200,
     // httpOnly: false,
     // secure: false,
     // sameSite: 'strict',

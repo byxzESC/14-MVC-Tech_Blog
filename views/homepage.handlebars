@@ -1,4 +1,9 @@
 {{!-- post title, post content, post by, post date --}}
-{{#each posts as |post|}}
-{{> postCard}}
-{{/each}}
+<div id="post">
+    {{#if posts }}
+    {{#each posts as |post|}}
+    {{> postCard logged_in=logged_in }}
+    {{/each}}
+    {{else}}
+    {{/if}}
+</div>

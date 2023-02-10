@@ -1,11 +1,10 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Post extends Model {
-  static bulkCreate(data) {
-    return this.bulkCreate(data);
-  }
-}
+let now = new Date();
+let formattedNow = now.getMonth() + '-' + now.getDate() + '-' + now.getFullYear();
+
+class Post extends Model { }
 // post title, post content, creator, create date
 Post.init(
   {
@@ -24,17 +23,17 @@ Post.init(
       allowNull: false,
     },
     created_at: {
-        type: DataTypes.DATE,
-        allowNull: false,
-        defaultValue: DataTypes.NOW
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: formattedNow
     },
     user_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        reference: {
-            model: 'user',
-            key: 'id',
-        }
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      reference: {
+        model: 'user',
+        key: 'id',
+      }
     }
   },
   {

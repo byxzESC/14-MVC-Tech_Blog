@@ -1,0 +1,56 @@
+[
+    {
+        "comment": "destroy",
+        "created_at": "02/03/2023",
+        "user_id": 1,
+        "post_id": 1
+    },
+    {
+        "comment": "steal",
+        "created_at": "02/04/2023",
+        "user_id": 1,
+        "post_id": 1
+    },
+    {
+        "comment": "steam",
+        "created_at": "02/05/2023",
+        "user_id": 1,
+        "post_id": 1
+    },
+    {
+        "comment": "savage",
+        "created_at": "02/06/2023",
+        "user_id": 2,
+        "post_id": 2
+    },
+    {
+        "comment": "raw",
+        "created_at": "02/07/2023",
+        "user_id": 3,
+        "post_id": 2
+    },
+    {
+        "comment": "sound",
+        "created_at": "02/08/2023",
+        "user_id": 4,
+        "post_id": 2
+    },
+    {
+        "comment": "image",
+        "created_at": "02/02/2023",
+        "user_id": 5,
+        "post_id": 2
+    },
+    {
+        "comment": "imagine",
+        "created_at": "02/01/2023",
+        "user_id": 6,
+        "post_id": 2
+    },
+    {
+        "comment": "loud",
+        "created_at": "01/30/2023",
+        "user_id": 2,
+        "post_id": 2
+    }
+]

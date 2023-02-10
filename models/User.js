@@ -1,12 +1,8 @@
-const { Model, DataTypes, bulkCreate } = require("sequelize");
+const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
 class User extends Model {
-  static bulkCreate(data) {
-    return this.bulkCreate(data);
-  }
-
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }

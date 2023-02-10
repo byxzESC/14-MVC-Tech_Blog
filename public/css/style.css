@@ -1,0 +1,33 @@
+nav {
+    background-color: tomato;
+}
+
+html,
+body {
+    margin: 0;
+    background-color: lavender;
+    text-align: center;
+}
+
+input.form-input {
+    width: 25vw;
+    margin: 0 auto;
+}
+
+.login-card {
+    margin: 1rem;
+}
+
+#post {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 16px 7% 16px 7%;
+    width: 75vw;
+    height: 100vh;
+}
+
+.card {
+    flex-basis: 33%;
+    margin: 16px 16px;
+}

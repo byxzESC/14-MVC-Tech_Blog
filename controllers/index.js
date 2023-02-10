@@ -9,7 +9,7 @@ const homeRoutes = require("./home-routes");
 
 router.use("/", homeRoutes);
 router.use("/api", api);
-// router.use('/dashboard', dashBoardRoutes);
+// router.use("/dashboard", dashBoardRoutes);
 // router.use("/login", loginRoutes);
 // router.use("/signup", signupRoutes);
 

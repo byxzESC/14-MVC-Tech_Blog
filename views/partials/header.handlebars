@@ -1,38 +1,20 @@
-<nav>
-	<h1>
-        The Tech Blog
-	</h1>
-	<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/dashboard">Dashboard</a></li>
-			<li><a href="/profile">Profile</a></li>
-			{{#if logged_in}}
-			<li><a id="logout" href="#">Log Out</a></li>
+<nav class="navbar">
+	<div class="container-fluid">
+		<a class="navbar-brand fs-1" href="/">
+			The Tech Blog
+		</a>
+		<div class="collapse navbar-collapse" id="navbar"></div>
+		<ul class="navbar-nav flex-row me-4 fs-3">
+			<li class="nav-item"><a class="nav-link active mx-2" href="/">Home</a></li>
+			<li class="nav-item"><a class="nav-link active mx-2" href="/dashboard">Dashboard</a></li>
+    {{#if logged_in}}
+			<li class="nav-item"><a class="nav-link active mx-2" id="logout" href="#">Log Out</a></li>
 			<script src="/js/logout.js"></script>
-			{{else}}
-			<li><a href="/login">Log In</a></li>
-			{{/if}}
-	</ul>
+    {{else}}
+
+			<li class="nav-item"><a class="nav-link active mx-2" href="/login">Log In</a></li>
+    {{/if}}
+		</ul>
+	</div>
+	</div>
 </nav>
-
-<style>
-	nav{
-		box-sizing: border-box;
-		display: flex;
-		width: 100vw;
-		background-color: rgb(150, 144, 144);
-		justify-content: space-between;
-		padding: 0px 10px;
-	}
-	nav ul {
-		display: flex;
-	}
-	nav ul li{
-		list-style: none;
-		margin: 10px;
-	}
-
-	html,body{
-		margin:0;
-	}
-</style>
