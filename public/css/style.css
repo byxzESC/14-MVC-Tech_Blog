@@ -18,7 +18,7 @@ input.form-input {
     margin: 1rem;
 }
 
-#post {
+#content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -28,6 +28,37 @@ input.form-input {
 }
 
 .card {
-    flex-basis: 33%;
+    flex-basis: 95%;
     margin: 16px 16px;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.card-title {
+    display: flex;
+    flex-direction: row;
+    background-color: tomato;
+    text-align: left;
+    width: 100%
+}
+
+.post-title {
+
+    width: 49%;
+}
+
+.post-desc {
+    text-align: right;
+    width: 49%;
+}
+
+.post-body {
+    text-align: left;
+}
+
+.comment {
+    text-align: left;
+    width: 100%
 }
