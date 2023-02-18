@@ -6,13 +6,14 @@ const withAuth = require('../../utils/auth')
 // three routes '/', 'dashboard/new', 'dashboard/edit/:id'
 
 // dashboard/new            post
-router.post("/", async (req, res) => {
+router.post("/new", async (req, res) => {
+  console.log('new post creating')
   try {
     const newPost = await Post.create({
       ...req.body,
       user_id: req.session.user_id,
     });
-
+    console.log(newPost);
     res.status(200).json(newPost);
   } catch (err) {
     res.status(400).json(err);

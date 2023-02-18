@@ -64,4 +64,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
     res.render('login');
   })
 
+  router.get('/post')
+  // Post.findOne
+  // res.render('post', {post})
 module.exports = router;

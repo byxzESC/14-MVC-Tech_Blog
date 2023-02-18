@@ -15,14 +15,19 @@
 		{{#each comment}}
 		<p class="comment">{{comment}}</p>
 		{{/each}}
+
+		<a href=`/post/${id}`>add comment</a>
 	</div>
 
 	{{! login status }}
 	{{#if logged_in}}
-	<form class="form" id="new-comment">
+	<form class="new-comment">
+		<p>post id{{id}}</p>
 		<label for="comment">add a comment: </label>
-		<input class="form-input" name="comment" type="text" data-user={{user_id}} data-postId={{id}} />
+		<input class="form-input" name="comment" type="text" data-postId={{id}} />
 		<button class="btn btn-primary">submit</button>
 	</form>
 	{{/if}}
 </section>
+
+<script src="js/addComment.js"></script>

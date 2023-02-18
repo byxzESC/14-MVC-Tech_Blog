@@ -2,7 +2,7 @@
 <div id="content">
     {{#if posts }}
     {{#each posts as |post|}}
-    {{> postCard logged_in=logged_in }}
+    {{> postCard logged_in="logged_in"}}
     {{/each}}
     {{else}}
     {{/if}}
